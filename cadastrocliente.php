@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<Header>
+	<Header>
 		<nav class="navbar bg-light">
 			<div class="container">
 			<a class="navbar-brand" id="nav-fred" href="#">
@@ -18,25 +18,27 @@
 			</div>
 		</nav>
 	</Header>
-<main>
-		<section>
-			<form id="cadastrar-cliente">
-				<fieldset>
-					<legend>Cadastro de Clientes</legend>
-					<div class="mb-3">
-						<label for="nome">Nome do Cliente:</label>
-						<input id="nome" class="form-control" name="nome" type="text" placeholder="digite o nome do seu cliente">
-					</div>
-					<div class="mb-3">
-						<label for="fone">Telefone:</label>
-						<input id="fone" class="form-control" name="fone" type="text" placeholder="(99)99999-9999">
-					</div>
-					<div class="p-3">
-				  		<button id="add-cliente" type="submit" class="btn btn-primary">Salvar Dados</button>
-					</div>
-				</fieldset>
-			  </form>
-		</section>
+
+	<main>
+			<section>
+				<form id="cadastrar-cliente">
+					<fieldset>
+						<legend>Cadastro de Clientes</legend>
+						<div class="mb-3">
+							<label for="nome">Nome do Cliente:</label>
+							<input id="nome" class="form-control" name="nome" type="text" placeholder="Digite o nome do seu cliente">
+						</div>
+						<div class="mb-3">
+							<label for="fone">Telefone:</label>
+							<input id="fone" class="form-control" name="fone" type="text" placeholder="(99)99999-9999">
+						</div>
+						<div class="p-3">
+							<button id="add-cliente" type="submit" class="btn btn-primary">Salvar Dados</button>
+						</div>
+					</fieldset>
+				</form>
+			</section>
+	</main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 

@@ -18,7 +18,30 @@
 			</div>
 		</nav>
 	</Header>
-
+    <main>
+			<section>
+				<form id="cadastrar-produto">
+					<fieldset>
+						<legend>Cadastro de Produtos</legend>
+						<div class="mb-3">
+							<label for="produto">Descrição do Produto:</label>
+							<input id="produto" class="w-50" name="produto" type="text" placeholder="Digite o nome do seu cliente">
+						</div>
+						<div class="mb-3">
+							<label for="qtd">Quantidade:</label>
+							<input id="qtd" name="qtd" type="text" placeholder="Quantidade unitária de produtos">
+						</div>
+                        <div class="mb-3">
+							<label for="valor">Valor Unitário:</label>
+							<input id="valor" name="valor" type="text" placeholder="Valor Unitário R$ 999,99">
+						</div>
+						<div class="p-3">
+							<button id="add-cliente" type="submit" class="btn btn-primary">Salvar Dados</button>
+						</div>
+					</fieldset>
+				</form>
+			</section>
+	</main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>

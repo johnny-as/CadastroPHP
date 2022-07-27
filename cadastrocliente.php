@@ -29,7 +29,11 @@
 							<input id="nome" class="form-control" name="nome" type="text" placeholder="Digite o nome do seu cliente">
 						</div>
 						<div class="mb-3">
-							<label for="fone">Telefone:</label>
+							<label for="email">Email:</label>
+							<input id="email" class="form-control" name="fone" type="text" placeholder="nome@restaurante.com">
+						</div>
+						<div class="mb-3">
+							<label for="fone">Celular:</label>
 							<input id="fone" class="form-control" name="fone" type="text" placeholder="(99)99999-9999">
 						</div>
 						<div class="p-3">

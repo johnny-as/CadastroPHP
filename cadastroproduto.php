@@ -33,7 +33,7 @@
 						</div>
                         <div class="mb-3">
 							<label for="valor">Valor Unitário:</label>
-							<input id="valor" name="valor" type="text" placeholder="Valor Unitário R$ 999,99">
+							<input id="valor" name="valor" type="text" placeholder="999,99">
 						</div>
 						<div class="p-3">
 							<button id="add-cliente" type="submit" class="btn btn-primary">Salvar Dados</button>

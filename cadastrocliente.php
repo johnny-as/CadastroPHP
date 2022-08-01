@@ -1,5 +1,20 @@
+<?php
+		require 'connection.php';
+
+		if (isset($_POST['submit']))
+		{
+			require 'autoload.php';
+			$cliente = new \App\Restaurante\Cliente($_POST['nome'], $_POST['email'], $_POST['fone']);
+		}
+
+		$sql = "SELECT * FROM clientes";
+
+		$result = $conn->query($sql);
+?>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +36,7 @@
 
 	<main>
 			<section>
-				<form id="cadastrar-cliente">
+				<form id="cadastrar-cliente" action="cadastrocliente.php" method="POST">
 					<fieldset>
 						<legend>Cadastro de Clientes</legend>
 						<div class="mb-3">
@@ -30,17 +45,43 @@
 						</div>
 						<div class="mb-3">
 							<label for="email">Email:</label>
-							<input id="email" class="form-control" name="fone" type="text" placeholder="nome@restaurante.com">
+							<input id="email" class="form-control" name="email" type="text" placeholder="nome@restaurante.com">
 						</div>
 						<div class="mb-3">
 							<label for="fone">Celular:</label>
 							<input id="fone" class="form-control" name="fone" type="text" placeholder="(99)99999-9999">
 						</div>
 						<div class="p-3">
-							<button id="add-cliente" type="submit" class="btn btn-primary">Salvar Dados</button>
+							<button id="add-cliente" type="submit" name="submit" class="btn btn-primary">Salvar Dados</button>
 						</div>
 					</fieldset>
 				</form>
+			</section>
+			<section>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Nome</th>
+							<th scope="col">Email</th>
+							<th scope="col">Celular</th>
+							<th scope="col">Data do Cadastro</th>
+						</tr>
+  					</thead>
+  					<tbody>
+						<?php 
+							while($user_data = mysqli_fetch_assoc($result)){
+								echo "<tr>";
+								echo "<td>".$user_data['id']."</td>";
+								echo "<td>".$user_data['nome']."</td>";
+								echo "<td>".$user_data['email']."</td>";
+								echo "<td>".$user_data['celular']."</td>";
+								echo "<td>".date('d/m/Y',  strtotime($user_data['data_cadastro']))."</td>";
+								echo "</tr>";
+							}
+						?>
+  					</tbody>
+				</table>
 			</section>
 	</main>
 

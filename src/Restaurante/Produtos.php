@@ -4,14 +4,15 @@ namespace App\Restaurante;
 
 class Produtos
 {
-    private $descricao;
-    private $quantidade;
-    private $valor;
+  public function __construct(string $nome, string $valor)
+  {
+    $this->insertProdutos($this->nome = $nome, $this->valor = $valor);
+  }
+  function insertProdutos(string $nome, string $valor)
+  {
+    require "connection.php";
+    mysqli_query($conn , "INSERT INTO itens(nome, valor) VALUES ('$nome', '$valor')");
 
-    public function __construct(string $descricao, int $quantidade, float $valor)
-    {
-      $this->descricao;
-      $this->quantidade;
-      $this->valor;
-    }
+  }
+
 }
